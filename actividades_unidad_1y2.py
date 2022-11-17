@@ -331,10 +331,22 @@ def cuads(n):
 cuads(40)
 
 
-# 8) Eliminar de una lista de palabras que se encuentren en una segunda lista.
+# 8) Eliminar de una lista de palabras aquellas que se encuentren también en una segunda lista.
 # Imprimir la lista original, la lista de palabras a eliminar y la lista resultante.
 
+lista1 = ["olla", "collar","clip", "autos", "Torneo", "Uololóh", "chango", "maceta"]
+lista2 = ["Troya", "collar","clip", "Bicicleta", "Torno", "Murciélago", "chango", "tundra"]
 
+def palabras(list1, list2):
+    lista_elim = []
+    list_origin = list(list1)
+    for i in list_origin:
+        if i in list2:
+            lista_elim.append(i)
+            list1.remove(i)
+    return f'Lista original: {list_origin}\nLista eliminados: {lista_elim}\nLista resultante: {list1}'
+
+print(palabras(lista1,lista2))
 
 # 9) Escribir una función que reciba una lista como parámetro y devuelva True si la
 # lista está ordenada en forma ascendente o False en caso contrario. Por
