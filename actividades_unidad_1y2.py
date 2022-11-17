@@ -321,6 +321,14 @@ print(es_par(4))
 # incluidos), donde N se ingresa desde el teclado. Luego se solicita imprimir los
 # últimos 10 valores de la lista.
 
+def cuads(n):
+    cuadrados = []
+    for i in range(1,n+1):
+        cuad = i ** 2
+        cuadrados.append(cuad)
+    print(cuadrados[-10:])
+
+cuads(40)
 
 
 # 8) Eliminar de una lista de palabras que se encuentren en una segunda lista.
