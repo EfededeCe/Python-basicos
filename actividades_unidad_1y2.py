@@ -354,7 +354,20 @@ print(palabras(lista1,lista2))
 # Desarrollar además un programa para verificar el comportamiento de la
 # función.
 
+li_desorden = [2, 3, 1, 5]
+li_orden = [1, 2, 3, 5, 8, 123]
 
+def ordenada(ord):
+    ordena = list(ord)
+    ordena.sort()
+    print(ordena)
+    if ord == ordena:
+        orden = True
+    else:
+        orden = False
+    return orden
+
+ordenada(li_desorden)
 
 # 10) Desarrollar una función que determine si una cadena de caracteres es capicúa,
 # sin utilizar cadenas auxiliares ni rebanadas. Escribir además un programa que
