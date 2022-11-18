@@ -358,8 +358,8 @@ li_desorden = [2, 3, 1, 5]
 li_orden = [1, 2, 3, 5, 8, 123]
 
 def ordenada(ord):
-    ordena = list(ord)
-    ordena.sort()
+    ordena = sorted(ord)
+    # ordena.sort()
     print(ordena)
     if ord == ordena:
         orden = True
@@ -372,6 +372,17 @@ ordenada(li_desorden)
 # 10) Desarrollar una función que determine si una cadena de caracteres es capicúa,
 # sin utilizar cadenas auxiliares ni rebanadas. Escribir además un programa que
 # permita verificar su funcionamiento.
+
+capicua = "Neuquen"
+no_capicua = "Córdoba"
+
+def es_capicua(c):
+    capi = ""
+    for i in range(len(c)-1,-1,-1):
+        capi+= c[i]
+    return c.lower() == capi.lower()
+
+print(es_capicua(no_capicua))
 
 
 
